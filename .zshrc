@@ -23,3 +23,5 @@ bindkey '^r' fh
 # asdf manages multiple runtime versions with a single CLI tool
 . /usr/local/opt/asdf/asdf.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
+
+export PATH=$PATH:$HOME/go/bin
