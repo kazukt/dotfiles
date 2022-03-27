@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# Install Homebrew
+if [ -z "$(command -v brew)" ]; then
+    echo "--- Start installing Homebrew ---"
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Zsh
+ln -fs ~/dotfiles/zsh/.zshrc ~/.zshrc
