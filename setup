@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+SCRIPT_DIR=$(pwd)
+
 # Install Homebrew
 if [ -z "$(command -v brew)" ]; then
     echo "--- Start installing Homebrew ---"
@@ -7,5 +9,11 @@ if [ -z "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# default config directory
+mkdir -p ~/.config
+
 # Zsh
-ln -fs `pwd`/zsh/.zshrc ~/.zshrc
+mkdir -p ~/.config/zsh
+ln -fs $SCRIPT_DIR/zsh/.zshenv ~/.zshenv
+ln -fs $SCRIPT_DIR/zsh/.zshrc ~/.config/zsh/.zshrc
+ln -fs $SCRIPT_DIR/zsh/rc.d ~/.config/zsh/rc.d
