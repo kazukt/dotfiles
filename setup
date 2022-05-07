@@ -8,4 +8,4 @@ if [ -z "$(command -v brew)" ]; then
 fi
 
 # Zsh
-ln -fs ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -fs `pwd`/zsh/.zshrc ~/.zshrc
