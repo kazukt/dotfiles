@@ -10,3 +10,6 @@ if type brew &>/dev/null; then
 fi
 
 autoload -Uz compinit && compinit
+
+# Kubernetes
+source <(kubectl completion zsh)
