@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 SCRIPT_DIR=$(pwd)
+XDG_CONFIG_HOME=~/.config
 
 # Install Homebrew
 if [ -z "$(command -v brew)" ]; then
@@ -10,10 +11,9 @@ if [ -z "$(command -v brew)" ]; then
 fi
 
 # default config directory
-mkdir -p ~/.config
+mkdir -p $XDG_CONFIG_HOME
 
 # Zsh
-mkdir -p ~/.config/zsh
+mkdir -p $XDG_CONFIG_HOME/zsh
 ln -fs $SCRIPT_DIR/zsh/.zshenv ~/.zshenv
-ln -fs $SCRIPT_DIR/zsh/.zshrc ~/.config/zsh/.zshrc
-ln -fs $SCRIPT_DIR/zsh/rc.d ~/.config/zsh/rc.d
+ln -fs $SCRIPT_DIR/zsh $XDG_CONFIG_HOME/zsh
