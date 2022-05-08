@@ -42,7 +42,9 @@ zle -N fh
 bindkey '^r' fh
 
 # asdf manages multiple runtime versions with a single CLI tool
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
+
+eval "$(starship init zsh)"
 
 export PATH=$PATH:$HOME/go/bin
