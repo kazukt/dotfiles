@@ -15,4 +15,3 @@ mkdir -p $XDG_CONFIG_HOME
 
 # Zsh
 ln -fs $SCRIPT_DIR/zsh/.zshenv ~/.zshenv
-ln -fs $SCRIPT_DIR/zsh $XDG_CONFIG_HOME
