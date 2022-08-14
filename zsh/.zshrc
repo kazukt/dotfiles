@@ -47,4 +47,10 @@ bindkey '^r' fh
 
 eval "$(starship init zsh)"
 
-export PATH=$PATH:$(go env GOPATH)/bin
+# https://zsh.sourceforge.io/Guide/zshguide02.html#l24
+typeset -U path
+
+path=(
+  "$(go env GOPATH)/bin"(N-/)
+  "$path[@]"
+)
