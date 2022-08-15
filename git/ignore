@@ -1,8 +1,17 @@
 # asdf
 .tool-versions
 
+# my documents
+.docs
+
+# IntelliJ IDEA
+.idea
+
 # macOS
 .DS_Store
+
+# my secrets
+.secrets
 
 # Visual Studio Code
 .vscode/*
