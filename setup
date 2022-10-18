@@ -10,8 +10,15 @@ if [ -z "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# default config directory
-mkdir -p $XDG_CONFIG_HOME
+if [ ! -d $XDG_CONFIG_HOME ]; then
+    echo "$XDG_CONFIG_HOME directory does not exist"
+    mkdir -p $XDG_CONFIG_HOME
+fi
 
-# Zsh
+# gh
+ln -fs $SCRIPT_DIR/gh $XDG_CONFIG_HOME
+# git
+ln -fs $SCRIPT_DIR/git $XDG_CONFIG_HOME
+# zsh
+ln -fs $SCRIPT_DIR/zsh $XDG_CONFIG_HOME
 ln -fs $SCRIPT_DIR/zsh/.zshenv ~/.zshenv

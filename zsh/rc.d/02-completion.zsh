@@ -9,7 +9,5 @@ if type brew &>/dev/null; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-autoload -Uz compinit && compinit
-
 # Kubernetes
 source <(kubectl completion zsh)
