@@ -7,6 +7,14 @@
 
 autoload -Uz compinit && compinit
 
+# https://zsh.sourceforge.io/Guide/zshguide02.html#l24
+typeset -U path
+
+path=(
+  "$(go env GOPATH)/bin"(N-/)
+  "$path[@]"
+)
+
 # The construct below is what Zsh calls an anonymous function; most other
 # languages would call this a lambda or scope function. It gets called right
 # away with the arguments provided and is then discarded.
@@ -48,11 +56,3 @@ bindkey '^r' fh
 . ~/.asdf/plugins/java/set-java-home.zsh
 
 eval "$(starship init zsh)"
-
-# https://zsh.sourceforge.io/Guide/zshguide02.html#l24
-typeset -U path
-
-path=(
-  "$(go env GOPATH)/bin"(N-/)
-  "$path[@]"
-)
