@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -eu
+
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+echo $SCRIPT_DIR
+VSCODE_SETTING_DIR="${HOME}/Library/Application\ Support/Code/User"
+echo $VSCODE_SETTING_DIR
+
+if [ ! -d "${VSCODE_SETTING_DIR}" ]; then
+  mkdir -p "${VSCODE_SETTING_DIR}"
+fi
+
+if [ -L "${VSCODE_SETTING_DIR}/settings.json" ]; then
+  echo "unlink"
+  unlink "${VSCODE_SETTING_DIR}/settings.json"
+elif [ -f "${VSCODE_SETTING_DIR}/settings.json" ]; then
+  echo "file"
+  mv "${VSCODE_SETTING_DIR}/settings.json" "${VSCODE_SETTING_DIR}/settings.json.bak"
+fi
+ln -s "${SCRIPT_DIR}/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
+
+if [ -x "$(command -v code)" ]; then
+  cat < ./extensions | while read -r line
+
+  do
+    code --install-extension "$line"
+  done
+
+  code --list-extensions > extensions
+else
+  echo "Visual Studio Code is not installed."
+fi

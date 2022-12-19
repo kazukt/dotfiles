@@ -1,0 +1,18 @@
+{
+  "terminal.integrated.fontSize" : 16,
+  "editor.insertSpaces" : true,
+  "editor.accessibilitySupport" : "off",
+  "github.gitAuthentication" : false,
+  "go.toolsManagement.autoUpdate" : true,
+  "editor.fontFamily" : "Fira Code",
+  "editor.fontSize" : 16,
+  "window.zoomLevel" : 1,
+  "editor.renderWhitespace" : "none",
+  "workbench.colorTheme": "Monokai",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.external.osxExec": "wezterm",
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open"
+}
