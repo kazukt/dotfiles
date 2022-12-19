@@ -12,6 +12,7 @@ typeset -U path
 
 path=(
   "$(go env GOPATH)/bin"(N-/)
+  "${HOME}/bin"(N-/)
   "$path[@]"
 )
 
