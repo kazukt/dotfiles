@@ -12,8 +12,8 @@ packages:
 - name: stedolan/jq@jq-1.6
 - name: mikefarah/yq@v4.30.6
 - name: x-motemen/ghq@v1.3.0
-- name: 1xyz/pryrite@0.10.20
 - name: sharkdp/bat@v0.22.1
 - name: junegunn/fzf@0.35.1
 - name: BurntSushi/ripgrep@13.0.0
+- name: kubernetes/kubectl@v1.23.15
 

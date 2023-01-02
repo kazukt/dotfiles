@@ -20,6 +20,12 @@ path=(
 )
 
 ##
+# Aqua settings
+#
+
+export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
+
+##
 # History settings
 #
 # Always set these first, so history is preserved, no matter what happens.
@@ -66,7 +72,7 @@ bindkey '^r' fh
 # eval "$(starship init zsh)"
 
 ##
-# Kubernetes
+# Kubernetes settings
 #
 
 if type kubectl &> /dev/null; then
