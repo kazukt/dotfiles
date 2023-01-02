@@ -28,7 +28,6 @@ path=(
 # Tell zsh where to store history.
 HISTFILE=${XDG_DATA_HOME:=~/.local/share}/zsh/history
 
-
 # Just in case: If the parent directory doesn't exist, create it.
 # h removes a trailing pathname component, shortening the path by one directory level.
 [[ -d $HISTFILE:h ]] || mkdir -p $HISTFILE:h
@@ -65,3 +64,11 @@ bindkey '^r' fh
 # . ~/.asdf/plugins/java/set-java-home.zsh
 
 # eval "$(starship init zsh)"
+
+##
+# Kubernetes
+#
+
+if type kubectl &> /dev/null; then
+  source <(kubectl completion zsh)
+fi
