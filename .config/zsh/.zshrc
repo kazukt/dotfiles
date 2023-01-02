@@ -7,38 +7,46 @@
 
 autoload -Uz compinit && compinit
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # https://zsh.sourceforge.io/Guide/zshguide02.html#l24
 typeset -U path
 
 path=(
+  "${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin"(N-/)
   "$(go env GOPATH)/bin"(N-/)
   "${HOME}/bin"(N-/)
   "$path[@]"
 )
 
-# The construct below is what Zsh calls an anonymous function; most other
-# languages would call this a lambda or scope function. It gets called right
-# away with the arguments provided and is then discarded.
-# Here, it enables us to use scoped variables in our dotfiles.
-() {
-  # `local` sets the variable's scope to this function and its descendendants.
-  local gitdir=~/Git  # Where to keep repos and plugins
+##
+# History settings
+#
+# Always set these first, so history is preserved, no matter what happens.
+#
 
-  # Load all of the files in rc.d that start with <number>- and end in .zsh
-  # (n) sorts the results in numerical order.
-  # <-> is an open-ended range. It matches any non-negative integer.
-  # <1-> matches any integer >= 1. <-9> matches any integer <= 9.
-  # <1-9> matches any integer that's >= 1 and <= 9.
-  local file=
-  for file in $ZDOTDIR/rc.d/<->-*.zsh(n); do
-    . $file
-  done
-} "$@"
-# $@ expands to all the arguments that were passed to the current context (in
-# this case, to `zsh` itself).
-# "Double quotes" ensures that empty arguments '' are preserved.
-# It's a good practice to pass "$@" by default. You'd be surprised at all the
-# bugs you avoid this way.
+# Tell zsh where to store history.
+HISTFILE=${XDG_DATA_HOME:=~/.local/share}/zsh/history
+
+
+# Just in case: If the parent directory doesn't exist, create it.
+# h removes a trailing pathname component, shortening the path by one directory level.
+[[ -d $HISTFILE:h ]] || mkdir -p $HISTFILE:h
+
+# Max number of entries to keep in history file.
+SAVEHIST=$(( 100 * 1000 ))      # Use multiplication for readability.
+
+# Max number of history entries to keep in memory.
+HISTSIZE=$(( 1.2 * SAVEHIST ))  # Zsh recommended value
+
+# Use modern file-locking mechanisms, for better safety & performance.
+setopt HIST_FCNTL_LOCK
+
+# Keep only the most recent copy of each duplicate entry in history.
+setopt HIST_IGNORE_ALL_DUPS
+
+# Auto-sync history between concurrent sessions.
+setopt SHARE_HISTORY
 
 # fh - repeat history
 fh() {
@@ -53,7 +61,7 @@ zle -N fh
 bindkey '^r' fh
 
 # asdf manages multiple runtime versions with a single CLI tool
-. /usr/local/opt/asdf/libexec/asdf.sh
-. ~/.asdf/plugins/java/set-java-home.zsh
+# . /usr/local/opt/asdf/libexec/asdf.sh
+# . ~/.asdf/plugins/java/set-java-home.zsh
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
