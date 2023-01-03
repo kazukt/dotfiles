@@ -7,23 +7,21 @@
 
 autoload -Uz compinit && compinit
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# https://zsh.sourceforge.io/Guide/zshguide02.html#l24
-typeset -U path
-
-path=(
-  "${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin"(N-/)
-  "$(go env GOPATH)/bin"(N-/)
-  "${HOME}/bin"(N-/)
-  "$path[@]"
-)
-
 ##
 # Aqua settings
 #
 
+export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
+
 export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
+
+##
+# Go settings
+#
+
+if type go &> /dev/null; then
+  PATH="$(go env GOPATH)/bin:$PATH"
+fi
 
 ##
 # History settings
@@ -52,6 +50,12 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Auto-sync history between concurrent sessions.
 setopt SHARE_HISTORY
+
+##
+# Homebrew settings
+#
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # fh - repeat history
 fh() {
