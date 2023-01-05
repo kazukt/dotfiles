@@ -7,7 +7,7 @@
 #   require_checksum: true
 registries:
 - type: standard
-  ref: v3.114.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v3.116.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 # jq cannot be used with apple silicon
 # - name: stedolan/jq@jq-1.6
