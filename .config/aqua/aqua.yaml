@@ -13,9 +13,8 @@ packages:
 # - name: stedolan/jq@jq-1.6
 # - name: sharkdp/bat@v0.22.1
 # - name: BurntSushi/ripgrep@13.0.0
-- name: mikefarah/yq@v4.30.6
-- name: x-motemen/ghq@v1.3.0
+- name: itchyny/gojq@v0.12.11
 - name: junegunn/fzf@0.35.1
 - name: kubernetes/kubectl@v1.23.15
-- name: itchyny/gojq@v0.12.11
-
+- name: mikefarah/yq@v4.30.6
+- name: x-motemen/ghq@v1.3.0
