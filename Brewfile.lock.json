@@ -1,0 +1,44 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/bundle": {
+        "revision": "3108b2e2a3346b439af7ce8e5bbd54e321c4d7fc"
+      },
+      "homebrew/cask": {
+        "revision": "a05f994eb90b5280ea1f71a5ff9e08859ca78748"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "3cfc52504bea9b272122cb69e9ee5d69a985a3e6"
+      },
+      "homebrew/core": {
+        "revision": "5c5937c53d24283363d4b34beb1918c52a4d4d88"
+      }
+    },
+    "brew": {
+      "aquaproj/aqua/aqua": {
+        "version": "1.29.0",
+        "bottle": false
+      }
+    },
+    "cask": {
+      "visual-studio-code": {
+        "version": "1.74.2",
+        "options": {
+          "full_name": "visual-studio-code"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "ventura": {
+        "HOMEBREW_VERSION": "3.6.16",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "5c5937c53d24283363d4b34beb1918c52a4d4d88",
+        "CLT": "14.2.0.0.1.1668646533",
+        "Xcode": "14.1",
+        "macOS": "13.0"
+      }
+    }
+  }
+}
