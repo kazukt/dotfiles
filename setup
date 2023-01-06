@@ -10,6 +10,12 @@ if [ -z "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+if [ -z "$(command -v rustup)" ]; then
+    echo "--- Start installing rustup ---"
+
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
 # link .config to $XDG_CONFIG_HOME
 ln -fs $SCRIPT_DIR/.config $XDG_CONFIG_HOME
 
