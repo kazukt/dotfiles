@@ -8,6 +8,9 @@
 registries:
 - type: standard
   ref: v3.116.0 # renovate: depName=aquaproj/aqua-registry
+- name: local
+  type: local
+  path: registry.yaml
 packages:
 # these cannot be used with apple silicon
 # - name: stedolan/jq@jq-1.6
@@ -19,3 +22,7 @@ packages:
 - name: kubernetes/kubectl@v1.23.15
 - name: mikefarah/yq@v4.30.6
 - name: x-motemen/ghq@v1.3.0
+
+# local registry
+- name: dandavison/delta@0.15.1
+  registry: local
