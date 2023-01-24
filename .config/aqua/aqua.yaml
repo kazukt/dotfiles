@@ -18,7 +18,7 @@ packages:
 # - name: BurntSushi/ripgrep@13.0.0
 - name: google/yamlfmt@v0.6.0
 - name: itchyny/gojq@v0.12.11
-- name: junegunn/fzf@0.35.1
+- name: junegunn/fzf@0.37.0
 - name: kubernetes/kubectl@v1.23.15
 - name: mikefarah/yq@v4.30.6
 - name: x-motemen/ghq@v1.3.0
