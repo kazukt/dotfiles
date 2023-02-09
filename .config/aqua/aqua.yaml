@@ -16,6 +16,7 @@ packages:
 # - name: stedolan/jq@jq-1.6
 # - name: sharkdp/bat@v0.22.1
 # - name: BurntSushi/ripgrep@13.0.0
+- name: cue-lang/cue@v0.4.3
 - name: golang/go@go1.19.4
 - name: google/yamlfmt@v0.6.0
 - name: itchyny/gojq@v0.12.11
@@ -23,7 +24,5 @@ packages:
 - name: kubernetes/kubectl@v1.23.15
 - name: mikefarah/yq@v4.30.8
 - name: x-motemen/ghq@v1.3.0
-
-# local registry
 - name: dandavison/delta@0.15.1
   registry: local
