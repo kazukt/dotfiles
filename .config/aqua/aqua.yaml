@@ -19,7 +19,7 @@ packages:
 - name: aws/aws-cli@2.7.22
 - name: bufbuild/buf@v1.13.1
 - name: cue-lang/cue@v0.4.3
-- name: golang/go@go1.19.4
+- name: golang/go@go1.20.1
 - name: google/yamlfmt@v0.6.0
 - name: itchyny/gojq@v0.12.11
 - name: junegunn/fzf@0.37.0
