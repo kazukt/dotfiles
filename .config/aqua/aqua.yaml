@@ -25,6 +25,6 @@ packages:
 - name: junegunn/fzf@0.38.0
 - name: kubernetes/kubectl@v1.23.15
 - name: mikefarah/yq@v4.31.1
-- name: x-motemen/ghq@v1.4.0
+- name: x-motemen/ghq@v1.4.1
 - name: dandavison/delta@0.15.1
   registry: local
