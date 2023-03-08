@@ -17,7 +17,7 @@ packages:
 # - name: sharkdp/bat@v0.22.1
 # - name: BurntSushi/ripgrep@13.0.0
 - name: aws/aws-cli@2.7.22
-- name: bufbuild/buf@v1.15.0
+- name: bufbuild/buf@v1.15.1
 - name: cue-lang/cue@v0.4.3
 - name: golang/go@go1.19.4
 - name: google/yamlfmt@v0.7.1
