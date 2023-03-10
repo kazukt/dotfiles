@@ -2,22 +2,36 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "3108b2e2a3346b439af7ce8e5bbd54e321c4d7fc"
+        "revision": "bac31a976d146f35c182dec6f6d65f7a917fd8c0"
       },
       "homebrew/cask": {
-        "revision": "a05f994eb90b5280ea1f71a5ff9e08859ca78748"
+        "revision": "b6d2804d31d008b204ac7200733cd7f183a1c421"
       },
       "homebrew/cask-fonts": {
-        "revision": "3cfc52504bea9b272122cb69e9ee5d69a985a3e6"
+        "revision": "eb2e7f7fcbc0a78d551aa33d48fdd89793a20f9a"
       },
       "homebrew/core": {
-        "revision": "5c5937c53d24283363d4b34beb1918c52a4d4d88"
+        "revision": "452e1e125b45d68f8bf37852457bbe34a1e4debf"
       }
     },
     "brew": {
       "aquaproj/aqua/aqua": {
-        "version": "1.29.0",
+        "version": "1.33.0",
         "bottle": false
+      },
+      "asdf": {
+        "version": "0.11.1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/asdf/blobs/sha256:9ba9f78ec97892b0e463df856a3b5570fd3d92868e2acb6979f4074be066fa18",
+              "sha256": "9ba9f78ec97892b0e463df856a3b5570fd3d92868e2acb6979f4074be066fa18"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -32,9 +46,9 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "3.6.16",
+        "HOMEBREW_VERSION": "4.0.1",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "5c5937c53d24283363d4b34beb1918c52a4d4d88",
+        "Homebrew/homebrew-core": "452e1e125b45d68f8bf37852457bbe34a1e4debf",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.1",
         "macOS": "13.0"

@@ -75,9 +75,10 @@ fh() {
 zle -N fh
 bindkey '^r' fh
 
-# asdf manages multiple runtime versions with a single CLI tool
-# . /usr/local/opt/asdf/libexec/asdf.sh
-# . ~/.asdf/plugins/java/set-java-home.zsh
+##
+# asdf
+#
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # eval "$(starship init zsh)"
 
