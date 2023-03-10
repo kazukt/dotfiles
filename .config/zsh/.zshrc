@@ -19,7 +19,9 @@ export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.conf
 # Rust
 #
 
-. "$HOME/.cargo/env"
+if type cargo rustc &> /dev/null; then
+  . "$HOME/.cargo/env"
+fi
 
 ##
 # Go settings
