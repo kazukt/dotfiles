@@ -32,6 +32,12 @@ if type go &> /dev/null; then
 fi
 
 ##
+# Sheldon
+#
+
+eval "$(sheldon source)"
+
+##
 # History settings
 #
 # Always set these first, so history is preserved, no matter what happens.
