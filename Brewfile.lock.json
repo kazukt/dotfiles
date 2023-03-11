@@ -89,6 +89,12 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "font-hack-nerd-font": {
+        "version": "2.3.3",
+        "options": {
+          "full_name": "font-Hack-nerd-font"
+        }
       }
     }
   },
