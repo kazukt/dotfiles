@@ -8,6 +8,12 @@
 autoload -Uz compinit && compinit
 
 ##
+# Homebrew
+#
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+##
 # Aqua settings
 #
 
@@ -35,7 +41,9 @@ fi
 # Sheldon
 #
 
-eval "$(sheldon source)"
+if type sheldon &> /dev/null; then
+  eval "$(sheldon source)"
+fi
 
 ##
 # History settings
@@ -64,12 +72,6 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Auto-sync history between concurrent sessions.
 setopt SHARE_HISTORY
-
-##
-# Homebrew settings
-#
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ##
 # asdf
