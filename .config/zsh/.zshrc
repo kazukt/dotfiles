@@ -71,18 +71,6 @@ setopt SHARE_HISTORY
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# fh - repeat history
-fh() {
-  # fc command: https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html
-  BUFFER=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
-
-  # Move the cursor to the end of the selected command.
-  # https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#index-CURSOR
-  CURSOR=${#BUFFER}
-}
-zle -N fh
-bindkey '^r' fh
-
 ##
 # asdf
 #
