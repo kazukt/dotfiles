@@ -14,6 +14,9 @@ shell = "zsh"
 
 [plugins]
 
+[plugins.compinit]
+inline = "autoload -Uz compinit && compinit"
+
 [plugins.fzf]
 github = "junegunn/fzf"
 use = ["*.zsh"]

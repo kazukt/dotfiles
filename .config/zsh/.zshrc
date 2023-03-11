@@ -5,8 +5,6 @@
 # Note: For historical reasons, there are other dotfiles, besides .zshenv and
 # .zshrc, that zsh reads, but there is really no need to use those.
 
-autoload -Uz compinit && compinit
-
 ##
 # Homebrew
 #
