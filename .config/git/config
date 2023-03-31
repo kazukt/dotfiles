@@ -5,6 +5,7 @@
 	email = kazuki.060525@gmail.com
 
 [core]
+	# https://dandavison.github.io/delta/environment-variables.html
 	pager = delta
 
 [interactive]
@@ -17,6 +18,7 @@
 	navigate = true
 
 [merge]
+	# https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging
 	conflictstyle = diff3
 
 [diff]
