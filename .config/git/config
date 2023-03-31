@@ -11,6 +11,7 @@
 	diffFilter = delta --color-only
 
 [delta]
+	# https://dandavison.github.io/delta/line-numbers.html
 	line-numbers = true
 	navigate = true
 
