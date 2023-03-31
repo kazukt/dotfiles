@@ -13,6 +13,7 @@
 [delta]
 	# https://dandavison.github.io/delta/line-numbers.html
 	line-numbers = true
+	# https://dandavison.github.io/delta/navigation-keybindings-for-large-diffs.html
 	navigate = true
 
 [merge]
