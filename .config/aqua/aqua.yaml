@@ -28,6 +28,6 @@ packages:
 - name: microsoft/ripgrep-prebuilt@v13.0.0-7
 - name: mikefarah/yq@v4.33.2
 - name: starship/starship@v1.13.1
-- name: x-motemen/ghq@v1.4.1
+- name: x-motemen/ghq@v1.4.2
 - name: dandavison/delta@0.15.1
   registry: local
