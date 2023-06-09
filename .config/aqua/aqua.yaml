@@ -29,5 +29,5 @@ packages:
 - name: mikefarah/yq@v4.34.1
 - name: starship/starship@v1.14.2
 - name: x-motemen/ghq@v1.4.2
-- name: dandavison/delta@0.15.1
+- name: dandavison/delta@0.16.5
   registry: local
