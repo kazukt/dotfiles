@@ -76,8 +76,6 @@ setopt SHARE_HISTORY
 #
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-# eval "$(starship init zsh)"
-
 ##
 # Kubernetes settings
 #
