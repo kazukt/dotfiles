@@ -3,6 +3,6 @@
   "extends": [
     "config:base",
     "github>aquaproj/aqua-renovate-config#1.6.0",
-    "github>aquaproj/aqua-renovate-config:file#1.6.0(.config/aqua/.*\\.ya?ml)"
+    "github>aquaproj/aqua-renovate-config:file#1.6.0(home/dot_config/aqua/.*\\.ya?ml)"
   ]
 }
