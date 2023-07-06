@@ -22,6 +22,7 @@ packages:
 - name: google/yamlfmt@v0.9.0
 - name: itchyny/gojq@v0.12.13
 - name: junegunn/fzf@0.42.0
+- name: knqyf263/pet@v0.5.0
 - name: kubernetes/kubectl@v1.25.11
 - name: kubernetes-sigs/krew@v0.4.3
 - name: microsoft/ripgrep-prebuilt@v13.0.0-10
