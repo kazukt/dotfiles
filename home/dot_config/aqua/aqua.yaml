@@ -26,5 +26,5 @@ packages:
 - name: microsoft/ripgrep-prebuilt@v13.0.0-10
 - name: mikefarah/yq@v4.34.1
 - name: starship/starship@v1.15.0
-- name: twpayne/chezmoi@v2.34.2
+- name: twpayne/chezmoi@v2.34.3
 - name: x-motemen/ghq@v1.4.2
