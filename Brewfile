@@ -7,4 +7,3 @@ brew "asdf"
 brew "sheldon"
 cask "font-Hack-nerd-font"
 cask "wezterm"
-
