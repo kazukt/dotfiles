@@ -77,9 +77,12 @@ setopt SHARE_HISTORY
 . $(brew --prefix asdf)/libexec/asdf.sh
 
 ##
-# Kubernetes settings
+# Kubernetes
 #
-
 if type kubectl &> /dev/null; then
   source <(kubectl completion zsh)
+fi
+
+if type krew &> /dev/null; then
+  export PATH="${PATH}:${HOME}/.krew/bin"
 fi
