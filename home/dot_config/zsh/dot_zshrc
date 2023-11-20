@@ -5,10 +5,12 @@
 # Note: For historical reasons, there are other dotfiles, besides .zshenv and
 # .zshrc, that zsh reads, but there is really no need to use those.
 
+autoload -Uz compinit && compinit
+eval "$(starship init zsh)"
+
 ##
 # Homebrew
 #
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ##
@@ -16,7 +18,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 #
 
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
-
 export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
 
 ##
@@ -75,6 +76,7 @@ setopt SHARE_HISTORY
 # asdf
 #
 . $(brew --prefix asdf)/libexec/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 ##
 # Kubernetes
