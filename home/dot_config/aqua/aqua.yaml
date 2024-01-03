@@ -13,7 +13,7 @@ packages:
 # - name: BurntSushi/ripgrep@13.0.0
 # - name: rossmacarthur/sheldon@0.7.3
 # - name: stedolan/jq@jq-1.6
-# - name: sharkdp/bat@v0.23.0
+# - name: sharkdp/bat@v0.24.0
 - name: aws/aws-cli@2.13.36
 - name: bufbuild/buf@v1.27.1
 - name: cue-lang/cue@v0.6.0
