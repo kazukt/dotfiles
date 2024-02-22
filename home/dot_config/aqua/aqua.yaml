@@ -14,7 +14,7 @@ packages:
 # - name: rossmacarthur/sheldon@0.7.3
 # - name: stedolan/jq@jq-1.6
 # - name: sharkdp/bat@v0.24.0
-- name: aws/aws-cli@2.13.36
+- name: aws/aws-cli@2.15.22
 - name: bufbuild/buf@v1.29.0
 - name: cue-lang/cue@v0.6.0
 - name: dandavison/delta@0.16.5
