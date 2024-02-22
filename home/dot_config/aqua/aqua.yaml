@@ -16,7 +16,7 @@ packages:
 # - name: sharkdp/bat@v0.24.0
 - name: aws/aws-cli@2.15.22
 - name: bufbuild/buf@v1.29.0
-- name: cue-lang/cue@v0.6.0
+- name: cue-lang/cue@v0.7.1
 - name: dandavison/delta@0.16.5
 - name: go-task/task@v3.31.0
 - name: google/yamlfmt@v0.11.0
