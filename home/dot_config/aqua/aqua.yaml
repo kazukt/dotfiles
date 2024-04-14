@@ -28,5 +28,5 @@ packages:
 - name: kubernetes-sigs/krew@v0.4.4
 - name: microsoft/ripgrep-prebuilt@v13.0.0-10
 - name: mikefarah/yq@v4.43.1
-- name: starship/starship@v1.17.1
+- name: starship/starship@v1.18.2
 - name: x-motemen/ghq@v1.6.1
