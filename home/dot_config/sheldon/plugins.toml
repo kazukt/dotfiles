@@ -21,8 +21,7 @@ inline = "autoload -Uz compinit && compinit"
 github = "wfxr/forgit"
 
 [plugins.fzf]
-github = "junegunn/fzf"
-use = ["*.zsh"]
+inline = 'eval "$(fzf --zsh)"'
 
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
