@@ -76,7 +76,7 @@ setopt SHARE_HISTORY
 ##
 # asdf
 #
-. $(brew --prefix asdf)/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
 
 ##
