@@ -23,7 +23,7 @@ packages:
   - name: dandavison/delta@0.17.0
   - name: go-task/task@v3.36.0
   - name: google/yamlfmt@v0.14.0
-  - name: itchyny/gojq@v0.12.15
+  - name: itchyny/gojq@v0.12.17
   - name: JohnnyMorganz/StyLua@v0.20.0
   - name: junegunn/fzf@0.51.0
   - name: knqyf263/pet@v0.7.1
