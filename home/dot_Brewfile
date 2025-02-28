@@ -12,4 +12,3 @@ brew "sheldon"
 # cask
 cask "font-hack-nerd-font"
 cask "ghostty"
-cask "wezterm"
