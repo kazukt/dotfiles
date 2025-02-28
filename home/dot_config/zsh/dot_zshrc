@@ -12,14 +12,6 @@ autoload -Uz compinit && compinit
 #
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-##
-# Aqua settings
-#
-
-export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
-export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
-export AQUA_POLICY_CONFIG=$HOME/.config/aqua/aqua-policy.yaml:$AQUA_POLICY_CONFIG
-
 eval "$(starship init zsh)"
 
 ##
@@ -78,10 +70,6 @@ setopt SHARE_HISTORY
 ##
 # Kubernetes
 #
-if type kubectl &> /dev/null; then
-  source <(kubectl completion zsh)
-fi
-
 if type krew &> /dev/null; then
   export PATH="${PATH}:${HOME}/.krew/bin"
 fi

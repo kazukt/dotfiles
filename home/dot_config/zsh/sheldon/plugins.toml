@@ -23,6 +23,11 @@ github = "wfxr/forgit"
 [plugins.fzf]
 inline = 'eval "$(fzf --zsh)"'
 
+[plugins.local-plugins]
+local = "~/.config/zsh/"
+use   = ["plugins/*.zsh"]
+apply = ["source"]
+
 [plugins.mise]
 inline = 'eval "$(mise activate zsh)"'
 
