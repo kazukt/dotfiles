@@ -14,12 +14,6 @@ shell = "zsh"
 
 [plugins]
 
-[plugins.compinit]
-inline = "autoload -Uz compinit && compinit"
-
-[plugins.forgit]
-github = "wfxr/forgit"
-
 [plugins.fzf]
 inline = 'eval "$(fzf --zsh)"'
 

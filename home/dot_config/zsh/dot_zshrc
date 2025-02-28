@@ -15,25 +15,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 
 ##
-# Rust
-#
-
-if type cargo rustc &> /dev/null; then
-  . "$HOME/.cargo/env"
-fi
-
-##
-# Go settings
-#
-
-if type go &> /dev/null; then
-  PATH="$(go env GOPATH)/bin:$PATH"
-fi
-
-##
 # Sheldon
 #
-
 if type sheldon &> /dev/null; then
   export SHELDON_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/sheldon"
   eval "$(sheldon source)"
