@@ -4,7 +4,6 @@ tap "homebrew/cask-fonts"
 
 # brew
 brew "aquaproj/aqua/aqua"
-brew "asdf"
 brew "chezmoi"
 brew "mise"
 brew "nvim"
