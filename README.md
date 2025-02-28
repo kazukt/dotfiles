@@ -1,8 +1,11 @@
 # dotfiles
 
-## ref
+kazukt dotfiles.
 
-- https://korosuke613.hatenablog.com/entry/2021/05/23/mydotfiles
-- https://www.m3tech.blog/entry/dotfiles-bonsai
-- https://github.com/marlonrichert/zsh-launchpad
-- https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+## Prerequisites
+
+- Please install [chezmoi](https://www.chezmoi.io/)
+
+```
+chezmoi init --apply --ssh --dry-run git@github.com:kazukt/dotfiles.git
+```
