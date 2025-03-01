@@ -1,17 +1,25 @@
 #!/usr/bin/env sh
 
-SCRIPT_DIR=$(pwd)
-XDG_CONFIG_HOME=~/.config
-
-# Install Homebrew
+# Install Homebrew 
 if [ -z "$(command -v brew)" ]; then
     echo "--- Start installing Homebrew ---"
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Install Rust
 if [ -z "$(command -v rustup)" ]; then
     echo "--- Start installing rustup ---"
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+# Install aqua dependencies
+if type aqua > /dev/null 2>&1; then
+    aqua install --all
+fi
+
+# Install mise dependencies
+if type mise > /dev/null 2>&1; then
+    mise install
 fi
